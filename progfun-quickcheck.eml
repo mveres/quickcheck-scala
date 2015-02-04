@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/progfun-quickcheck"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="scalacheck_2.10-1.10.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib_managed/jars/org.scalacheck/scalacheck_2.10/scalacheck_2.10-1.10.1.jar!/"/>
+	</lib>
+	<lib name="test-interface-0.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib_managed/jars/org.scala-tools.testing/test-interface/test-interface-0.5.jar!/"/>
+	</lib>
+	<lib name="scala-actors-2.10.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib_managed/jars/org.scala-lang/scala-actors/scala-actors-2.10.1.jar!/"/>
+	</lib>
+	<lib name="scalatest_2.10-1.9.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib_managed/jars/org.scalatest/scalatest_2.10/scalatest_2.10-1.9.1.jar!/"/>
+	</lib>
+	<lib name="scala-reflect-2.10.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib_managed/jars/org.scala-lang/scala-reflect/scala-reflect-2.10.0.jar!/"/>
+	</lib>
+	<lib name="junit-4.10.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib_managed/jars/junit/junit/junit-4.10.jar!/"/>
+	</lib>
+	<lib name="hamcrest-core-1.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib_managed/jars/org.hamcrest/hamcrest-core/hamcrest-core-1.1.jar!/"/>
+	</lib>
+	<levels>
+		<level name="SBT: org.scala-lang:scala-library:2.10.2:" value="project"/>
+	</levels>
+</component>
