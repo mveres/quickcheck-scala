@@ -35,6 +35,30 @@ abstract class QuickCheckHeap extends Properties("Heap") with IntHeap {
     findMin(h) == xs(1)
   }
 
+  property("deleteMin") = forAll { a: Int =>
+    val h = insert(a, empty)
+    val e = deleteMin(h)
+    e == empty
+  }
+
+  property("sortedMinimums") = forAll { h: H =>
+    val sortedMinimums = deleteAndGetAll(h, Nil).reverse
+    sortedMinimums == sortedMinimums.sorted
+  }
+
+  def deleteAndGetAll (h: H, acc: List[A]) :List[A] = {
+    if (h != empty) {
+      val newAcc = findMin(h) :: acc
+      deleteAndGetAll(deleteMin(h), newAcc)
+    }
+    else
+      acc
+  }
+
+  property("findMinFromMeld") = forAll { (h1: H, h2: H) =>
+    findMin(meld(h1, h2)) == Math.min(findMin(h1), findMin(h2))
+  }
+
   lazy val genHeap: Gen[H] =  for {
     k <- arbitrary[Int]
     h <- oneOf(value(empty), genHeap)
